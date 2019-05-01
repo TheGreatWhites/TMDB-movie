@@ -1,0 +1,64 @@
+.detailWrapper{
+    margin:30px auto;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius:5px;
+    background: rgba(255,255,255,0.6);
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.title{
+    margin: 0 20px;
+    padding: 10px;
+    font-size: 1.1em;
+    color: #000;
+    font-weight: 600;
+    border-bottom: 1px solid rgb(20, 147, 185);
+}
+
+.title a, .title a:active, .title a:visited{
+    color: #000;
+    text-decoration: none;
+}
+
+.description{
+    width:100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.image{
+    padding: 20px;
+}
+
+.image img{
+    width: 100%;
+}
+
+.data{
+    padding: 20px;
+    align-self: baseline;
+}
+
+.overview{
+    margin-bottom: 30px;
+}
+
+.runtime_rating_wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 150px;
+    justify-content: space-between;
+    margin:20px 0; 
+}
+
+.genre{
+    margin:20px 0;
+}
+
+.label{
+    font-weight: bold;
+}
