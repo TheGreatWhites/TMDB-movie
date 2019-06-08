@@ -9,11 +9,10 @@ class Search extends Component {
 				onSubmit={event => {
 					event.preventDefault();
 					this.props.submitHandler(this.textInput.value);
-					this.props.history.push('/');
 				}}>
 				<input
 					type='text'
-					placeholder='Enter Movie Name'
+					placeholder='Search...'
 					className={style.searchField}
 					ref={input => (this.textInput = input)}
 				/>

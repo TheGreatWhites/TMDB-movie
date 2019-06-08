@@ -30,7 +30,7 @@ const List = props => {
 											/>
 										</div>
 										<div className={style.elementTitle}>
-											<span>{result.title}</span>
+											<span>{result.title ? result.title : result.name}</span>
 										</div>
 									</div>
 								</div>

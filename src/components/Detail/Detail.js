@@ -8,12 +8,11 @@ const Detail = props => {
 				<a
 					href={props.data.homepage ? props.data.homepage : '#'}
 					target='blank'>
-					{props.data.title}
+					{props.data.title ? props.data.title : props.data.name}
 				</a>
 			</div>
 
 			<input hidden value={props.data.id} id='tmdbID' readOnly />
-			<input hidden value={props.data.imdb_id} id='imdbID' readOnly />
 			<div className={style.description + ' row'}>
 				<div className={style.image + ' col-sm-3'}>
 					<a
@@ -40,10 +39,13 @@ const Detail = props => {
 							<span className={style.label}> Votes </span>
 							{props.data.vote_count}
 						</div>
-						<div className={style.runtime}>
-							<span className={style.label}>Runtime </span>
-							{props.data.runtime} mins
-						</div>
+						{props.data.runtime ?
+							<div className={style.runtime}>
+								<span className={style.label}>Runtime </span>
+								{props.data.runtime} mins
+							</div>
+						: ''}
+						
 					</div>
 					<div className={style.genre}>
 						<span className={style.label}>Genres : </span>
@@ -53,10 +55,13 @@ const Detail = props => {
 						<span className={style.label}>Overview : </span>
 						{props.data.overview}
 					</div>
-					<div className={style.releaseDate}>
-						<span className={style.label}>Release Date : </span>
-						{props.data.release_date}
-					</div>
+					{props.data.release_date ?
+						<div className={style.releaseDate}>
+							<span className={style.label}>Release Date : </span>
+							{props.data.release_date}
+						</div>
+					: ''}
+					
 				</div>
 			</div>
 		</div>

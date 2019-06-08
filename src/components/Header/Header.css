@@ -1,0 +1,118 @@
+.headerWrapper{
+    width: 100%;
+    position:sticky;
+    z-index: 99;
+    top:0;
+    background-color: rgb(255,255,255);
+    box-shadow: 0 2px 10px rgb(0,0,0);
+}
+
+.headerContent{
+    width: 100%;
+    display: flex;
+    padding: 0 30px;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.headerWrapper input,.headerWrapper button{
+    padding: 3px 10px;
+    font-size: 0.9em;
+}
+
+.Navbar ul,.Navbar li{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.Navbar li{
+    padding: 15px 20px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.Navbar li:hover{
+    background-color: rgba(0,0,0,0.2);
+}
+
+.Search{
+    margin: auto 0;
+}
+
+.Hamburger {
+    display:none;
+}
+
+.Backdrop{
+    position: fixed;
+    width:100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    top:0;
+    left:0;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+@media screen and (max-width:999px) {
+    .headerContent{
+        height: 50px;
+    }
+    .Navbar{
+        width:300px;
+        position: relative;
+    }
+    .Navbar ul,.Navbar li{
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+    .Navbar ul{
+        left:-200%;
+        position: absolute;
+        background-color: #fff;
+        top: 0px;
+        height:100vh;
+        padding-top:50px;
+        transition: all 0.5s;
+    }
+    .Navbar ul.active{
+        left: -30px;
+        box-shadow: 1px 0 10px 5px rgba(0,0,0,1);
+        z-index: 9;
+        transition: all 0.5s;
+    }
+    .Hamburger {
+        display: inline-block;
+        position: absolute;
+        top:10px;
+        left:-15px;
+        font-size: 25px;
+    }
+    .Backdrop.active{
+        opacity:1;
+        transition: all 0.5s;
+    }
+    .Hamburger .BurgerIcon{
+        z-index: 10;
+        transition: all 0.5s;
+    }
+
+    .Hamburger.active .BurgerIcon{
+        opacity:0;
+        transition: all 0.5s;
+    }
+
+    .Hamburger .BackIcon{
+        z-index: 10;
+        transition: all 0.5s;
+        opacity:0;
+        left: -25px;
+    }
+
+    .Hamburger.active .BackIcon{
+        transition: all 0.5s;
+        opacity: 1;
+    }
+}

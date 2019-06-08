@@ -1,5 +1,4 @@
 .searchForm{
-    margin: 40px auto;
     max-width: 700px;
     width: 90%;
     display: flex;
@@ -9,6 +8,7 @@
 .searchField{
     margin-right:10px;
     display: inline;
+    background: rgba(0,0,0,0.8)
 }
 
 .searchButton{
