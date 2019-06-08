@@ -8,6 +8,9 @@ class Header extends Component{
     toggleMenu = () => {
         this.setState({menuActive:!this.state.menuActive});
     }
+    closeMenu = () => {
+        this.setState({menuActive:0});
+    }
     searchHandler = (val) => {
         this.props.submitHandler(val);
     }
@@ -55,6 +58,7 @@ class Header extends Component{
                                     <li key={element.id} onClick={() => {
                                         this.props.history.push(element.link);
                                         this.props.getData();
+                                        this.closeMenu();
                                     }}>{element.title}</li>        
                                 );
                             })
