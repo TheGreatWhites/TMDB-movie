@@ -8,6 +8,8 @@ import style from './App.css';
 import Header from './Header/Header';
 import List from './List/List';
 import Detail from './Detail/Detail';
+import Login from './Login/LoginForm';
+import SignUp from './SignUp/SignUp';
 
 class App extends Component {
 	state = {};
@@ -144,6 +146,16 @@ class App extends Component {
 								clickHandler={this.clickHandler}
 							/>
 						)}
+					/>
+					<Route
+						path='/login'
+						exact
+						render={Login}
+					/>
+					<Route
+						path='/signup'
+						exact
+						render={SignUp}
 					/>
 					<Route
 						path='/detail'

@@ -10,7 +10,7 @@
 .headerContent{
     width: 100%;
     display: flex;
-    padding: 0 30px;
+    padding: 0;
     justify-content: space-between;
     flex-direction: row;
 }
@@ -37,7 +37,7 @@
 }
 
 .Search{
-    margin: auto 0;
+    margin: auto 30px;
 }
 
 .Hamburger {
@@ -51,11 +51,29 @@
     background-color: rgba(0,0,0,0.5);
     top:0;
     left:0;
+    display:none;
     opacity: 0;
     transition: all 0.5s;
 }
 
+.loginWrapper{
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+.loginText{
+    display: none;
+}
+.loginIcon{
+    cursor: pointer;
+}
+
 @media screen and (max-width:999px) {
+    .Search{
+        margin: auto 0;
+    }
     .headerContent{
         height: 50px;
     }
@@ -68,31 +86,54 @@
         width: 100%;
         margin: 0;
     }
-    .Navbar ul{
+    .Navbar .Sidebar{
         left:-200%;
         position: absolute;
         background-color: #fff;
         top: 0px;
+        width: 200px;
         height:100vh;
-        padding-top:50px;
         transition: all 0.5s;
     }
-    .Navbar ul.active{
-        left: -30px;
+    .Navbar .Sidebar.active{
+        left: 00px;
         box-shadow: 1px 0 10px 5px rgba(0,0,0,1);
         z-index: 9;
         transition: all 0.5s;
+    }
+    .loginWrapper{
+        display: inline-block;
+        position: initial;
+        padding: 10px 38px 6px 10px;
+        border-bottom: 2px solid #e1e1e1;
+    }
+    .loginWrapper:hover{
+        background-color: rgba(0,0,0,0.2);
+    }
+    .loginText{
+        display: inline-block;
+        margin-left: 10px;
+    }
+    .loginIcon{
+        display: inline-block;
+        cursor: pointer;
+    }
+    .loginIcon img{
+        border: 1px solid black;
+        padding: 3px;
+        border-radius: 50%;
     }
     .Hamburger {
         display: inline-block;
         position: absolute;
         top:10px;
-        left:-15px;
+        left: 10px;
         font-size: 25px;
     }
     .Backdrop.active{
         opacity:1;
         transition: all 0.5s;
+        display:block;
     }
     .Hamburger .BurgerIcon{
         z-index: 10;

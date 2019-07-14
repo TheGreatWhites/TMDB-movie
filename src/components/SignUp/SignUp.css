@@ -1,0 +1,36 @@
+.formOuterWrapper{
+    max-width: 600px;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    margin: 0 auto;
+}
+.formInnerWrapper{
+    text-align: left;
+}
+.formInnerWrapper input{
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.formInnerWrapper button{
+    padding: 10px 20px;
+    color:rgb(80, 80, 80);
+    position: relative;
+    left: 100%;
+    transform: translateX(-124%);
+}
+.loginPrompt{
+    margin:20px 0;
+    text-align: center;
+}
+.loginPrompt a{
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.loginPrompt .prompt{
+    display:inline-block;
+}
+@media screen and (max-width: 999px){
+
+}
